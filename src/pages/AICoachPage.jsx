@@ -1,20 +1,21 @@
-// src/pages/Habit_tracker.jsx
-import HabitTracker from "../components/HabitTracker";
+// src/pages/AICoachPage.jsx
+import AICoach from "../components/AICoach";
 
-function Habit_tracker() {
+function AICoachPage() {
   return (
     <div className="space-y-6">
       <section className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
         <h3 className="text-sm font-semibold text-slate-800 mb-3">
-          Daily Habits
+          AI Focus Coach
         </h3>
         <p className="text-xs text-slate-500 mb-4">
-          Build consistency by checking off each habit you complete.
+          Ask for tips on focus, planning your study session, or breaking down
+          big tasks.
         </p>
-        <HabitTracker />
+        <AICoach />
       </section>
     </div>
   );
 }
 
-export default Habit_tracker;
+export default AICoachPage;

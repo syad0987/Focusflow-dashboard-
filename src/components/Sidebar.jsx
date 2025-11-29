@@ -1,151 +1,117 @@
-const Sidebar = () => {
+import { NavLink } from "react-router-dom";
+const navItem =
+  "flex item-center gap-3 px-4 py-2 rounded-lg text-sm font-medium  ";
+
+function Sidebar() {
   return (
-    <div
-      className="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar"
-      style={{ width: "280px" }}
-    >
-      {" "}
-      <a
-        href="/"
-        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-      >
-        {" "}
-        <svg
-          className="bi pe-none me-2"
-          width="40"
-          height="32"
-          aria-hidden="true"
-        >
-          <use xlinkHref="#bootstrap"></use>
-        </svg>{" "}
-        <span className="fs-4">FocusFlow</span>{" "}
-      </a>{" "}
-      <hr />{" "}
-      <ul className="nav nav-pills flex-column mb-auto">
-        {" "}
-        <li className="nav-item">
-          {" "}
-          <a href="#" className="nav-link active" aria-current="page">
-            {" "}
-            <svg
-              className="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#home"></use>
-            </svg>
-            Tasks
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" className="nav-link link-body-emphasis">
-            {" "}
-            <svg
-              className="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#speedometer2"></use>
-            </svg>
-            Calender
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" className="nav-link link-body-emphasis">
-            {" "}
-            <svg
-              className="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#table"></use>
-            </svg>
-            Habits
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" className="nav-link link-body-emphasis">
-            {" "}
-            <svg
-              className="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#grid"></use>
-            </svg>
-            Focus Mode
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" className="nav-link link-body-emphasis">
-            {" "}
-            <svg
-              className="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#people-circle"></use>
-            </svg>
-            AI Coach
-          </a>{" "}
-        </li>{" "}
-      </ul>{" "}
-      <hr />{" "}
-      <div className="dropdown">
-        {" "}
-        <a
-          href="#"
-          className="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          {" "}
-          <img
-            src="https://github.com/mdo.png"
-            alt=""
-            width="32"
-            height="32"
-            className="rounded-circle me-2"
-          />{" "}
-          <strong>mdo</strong>{" "}
-        </a>{" "}
-        <ul className="dropdown-menu text-small shadow">
-          {" "}
-          <li>
-            <a className="dropdown-item" href="#">
-              New project...
-            </a>
-          </li>{" "}
-          <li>
-            <a className="dropdown-item" href="#">
-              Settings
-            </a>
-          </li>{" "}
-          <li>
-            <a className="dropdown-item" href="#">
-              Profile
-            </a>
-          </li>{" "}
-          <li>
-            <hr className="dropdown-divider" />
-          </li>{" "}
-          <li>
-            <a className="dropdown-item" href="#">
-              Sign out
-            </a>
-          </li>{" "}
-        </ul>{" "}
+    <aside className="w-60 bg-slate-900 text-slate-100 flex flex-col py-6 px-3 overflow-hidden h-screen">
+      <div className="mb-8 px-3">
+        <h1 className="text-2xl font-semibold tracking-tight">
+          <span className="text-emerald-400">Dashly</span>
+        </h1>
+        <p className=" text-xs text-slate-300">Focus & habit dashboard</p>
       </div>
-    </div>
+      <nav>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400"
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>🏠</span>
+          <span>Dashboard</span>
+        </NavLink>
+
+        <NavLink
+          to="/focus"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>⏱️</span>
+          <span>Focus Mode</span>
+        </NavLink>
+
+        <NavLink
+          to="/habits"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>📅</span>
+          <span>Habits</span>
+        </NavLink>
+
+        <NavLink
+          to="/weekly"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>📊</span>
+          <span>Weekly Progress</span>
+        </NavLink>
+
+        <NavLink
+          to="/tasks"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>✅</span>
+          <span>Tasks</span>
+        </NavLink>
+
+        <NavLink
+          to="/ai-coach"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>🤖</span>
+          <span>AI Coach</span>
+        </NavLink>
+
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            `${navItem} ${
+              isActive
+                ? "bg-slate-800 text-emerald-400 "
+                : "text-slate-300 hover:bg-slate-800"
+            }`
+          }
+        >
+          <span>⚙️</span>
+          <span> Settings</span>
+        </NavLink>
+      </nav>
+    </aside>
   );
-};
+}
+
 export default Sidebar;

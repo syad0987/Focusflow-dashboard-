@@ -15,9 +15,9 @@ const Login = () => {
     }
   };
   return (
-    <div className="container mt-28 grid place-content-center h-fit mx-auto border-2 border-purple-300 bg-pink-200 p-6 rounded-2xl max-w-md">
+    <div className="container mt-28 grid place-content-center h-fit mx-auto border-2 border-purple-300 bg-pink-100 p-6 rounded-2xl max-w-md">
       {" "}
-      <div className="border bg-purple-600 rounded-2xl max-w-xl">
+      <div className="border bg-purple-400 rounded-2xl max-w-xl mb-2.5">
         <h1 className="text-center text-black-500 text-2xl font-bold mb-6">
           Login
         </h1>
